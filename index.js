@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
 });
 
-/* const documentation = require("./src/utils/documentacion/index.json"); */
+const documentation = require("./src/utils/documentation/index.json");
 
 app.use(cors({
 
@@ -50,11 +50,11 @@ app.use(express.urlencoded({ limit: '5mb', extended: true }))
 app.use('/api/admins', AdminsRoutes);
 app.use('/api/calles', CallesRoutes);
 app.use('/api/campeones', CampeonesRoutes);
-/* app.use("/", (req, res, next) => {
+app.use("/", (req, res, next) => {
 
     return res.json(documentation);
 
-}); */
+});
 
 app.use('*', (req, res, next) => {
 

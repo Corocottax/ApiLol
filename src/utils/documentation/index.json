@@ -1,0 +1,270 @@
+{
+
+    "Admins": [
+
+        {
+
+            "info": "POST NEW ADMIN",
+            "endpoint": "/api/admins/",
+            "action": "POST",
+            "requested": {
+
+                "name": "Example",
+                "email": "example@gmail.com",
+                "password": "admin password, you can try to send me an email to request this password"
+
+            },
+            "response" : {
+
+                "name": "Example",
+                "email": "example@gmail.com"
+
+            }
+
+        },
+
+        {
+
+            "info": "GET ADMINS //this is only for admins",
+            "endpoint": "/api/admins/",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e1980fe708e0c3c1efd7b4",
+                "name": "Example",
+                "email": "example@gmail.com",
+                "password": "$2b$10$P3aXCSMuMY/JQqd4MoQnN.NXjF68B3iPJveq.t.IS5qXTttQ.NYwu",
+                "__v": 0,
+                "createdAt": "2022-01-14T15:34:39.934Z",
+                "updatedAt": "2022-01-14T15:48:19.956Z"
+
+            }
+
+        },
+
+        {
+
+            "info": "LOGIN",
+            "endpoint": "/api/admins/login",
+            "action": "LOGIN",
+            "requested": {
+
+                "email": "example@gmail.com",
+	            "password": "admin password" 
+
+            },
+            "response" : {
+
+                "token": "recieves token"
+
+            }
+
+        },
+
+        {
+
+            "info": "PATCH ONE ADMIN BY ID //this is only for admins",
+            "endpoint": "/api/admins/:id",
+            "action": "PATCH",
+            "requested": {
+
+                "name": "ExampleModified",
+                "email": "example@gmail.com",
+                "password": "admin password",
+                "__v": 0
+
+            },
+            "response" : {
+
+                "new": {
+                    "name": "ExampleModified",
+                    "email": "example@gmail.com",
+                    "password": "admin password",
+                    "_id": "61e1980fe708e0c3c1efd7b4",
+                    "__v": 0
+                },
+                "old": {
+                    "_id": "61e1980fe708e0c3c1efd7b4",
+                    "name": "Example",
+                    "email": "example@gmail.com",
+                    "password": "$2b$10$P3aXCSMuMY/JQqd4MoQnN.NXjF68B3iPJveq.t.IS5qXTttQ.NYwu",
+                    "__v": 0,
+                    "createdAt": "2022-01-14T15:34:39.934Z",
+                    "updatedAt": "2022-01-14T15:34:39.934Z"
+                }
+
+            }
+
+        },
+
+        {
+
+            "info": "LOGOUT //this is only for admins",
+            "endpoint": "/api/admins/logout",
+            "action": "LOGOUT",
+            "response" : {
+
+                "token": "null"
+
+            }
+
+
+        }
+
+    ],
+
+    "Calles": [
+
+        {
+
+            "info": "GET ALL CALLES",
+            "endpoint": "/api/calles",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e43461c5928008f63d33b1",
+                "calle": "Top",
+                "url": "https://res.cloudinary.com/dhp2zuftj/image/upload/v1642344863/imagenes-campeones/Top_uhhcd5.png",
+                "__v": 0,
+                "createdAt": "2022-01-16T15:06:10.139Z",
+                "updatedAt": "2022-01-16T15:06:10.139Z"
+
+            }
+
+        }
+
+    ],
+
+    "Campeones": [
+
+        {
+
+            "info": "POST A NEW PC //this is only for admins",
+            "endpoint": "/api/campeones",
+            "action": "POST",
+            "requested": {
+
+                "name": "Aatrox",
+                "url": "UrlExample",
+                "calles": "CalleId",
+                "runas": "runasExample"
+
+            },
+            "response" : {
+
+                "calles": [
+                    "61e43461c5928008f63d33b1"
+                ],
+                "_id": "61e48e66ceaa05c1050f883d",
+                "name": "Aatrox",
+                "url": "UrlExample",
+                "runas": "runasExample",
+                "createdAt": "2022-01-16T21:30:14.736Z",
+                "updatedAt": "2022-01-16T21:30:14.736Z",
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET ALL CAMPEONES",
+            "endpoint": "/api/campeones",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e437b4daa76a4078d19e0c",
+                "name": "Aatrox",
+                "url": "https://res.cloudinary.com/dhp2zuftj/image/upload/v1642339414/imagenes-campeones/Aatrox_t2gn2y.png",
+                "calles": [
+                    {
+                        "_id": "61e43461c5928008f63d33b1",
+                        "calle": "Top",
+                        "url": "https://res.cloudinary.com/dhp2zuftj/image/upload/v1642344863/imagenes-campeones/Top_uhhcd5.png",
+                        "__v": 0,
+                        "createdAt": "2022-01-16T15:06:10.139Z",
+                        "updatedAt": "2022-01-16T15:06:10.139Z"
+                    }
+                ],
+                "runas": "https://www.leagueofgraphs.com/es/champions/runes/aatrox",
+                "__v": 0,
+                "createdAt": "2022-01-16T15:20:21.085Z",
+                "updatedAt": "2022-01-16T15:20:21.085Z"
+
+            }
+
+        },
+
+        {
+
+            "info": "GET CAMPEON BY NAME",
+            "endpoint": "/api/campeones/:name",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e437b4daa76a4078d19e0c",
+                "name": "Aatrox",
+                "url": "https://res.cloudinary.com/dhp2zuftj/image/upload/v1642339414/imagenes-campeones/Aatrox_t2gn2y.png",
+                "calles": [
+                    {
+                        "_id": "61e43461c5928008f63d33b1",
+                        "calle": "Top",
+                        "url": "https://res.cloudinary.com/dhp2zuftj/image/upload/v1642344863/imagenes-campeones/Top_uhhcd5.png",
+                        "__v": 0,
+                        "createdAt": "2022-01-16T15:06:10.139Z",
+                        "updatedAt": "2022-01-16T15:06:10.139Z"
+                    }
+                ],
+                "runas": "https://www.leagueofgraphs.com/es/champions/runes/aatrox",
+                "__v": 0,
+                "createdAt": "2022-01-16T15:20:21.085Z",
+                "updatedAt": "2022-01-16T15:20:21.085Z"
+
+            }
+
+        },
+
+        {
+
+            "info": "PATCH ONE CAMPEON BY ID //this is only for admins",
+            "endpoint": "/api/campeones/:id",
+            "action": "PATCH",
+            "requested": {
+
+                "name": "Aatrox2",
+                "url": "UrlExample",
+                "calles": "CalleId",
+                "runas": "runasExample"
+
+            },
+            "response" : {
+
+                "new": {
+                    "name": "Aatrox2",
+                    "calles": [
+                        "CalleId"
+                    ],
+                    "runas": "runasExample",
+                    "_id": "61e48e66ceaa05c1050f883d",
+                    "url": "UrlExample"
+                },
+                "old": {
+                    "name": "Aatrox",
+                    "calles": [
+                        "CalleId"
+                    ],
+                    "runas": "runasExample",
+                    "_id": "61e48e66ceaa05c1050f883d",
+                    "url": "UrlExample",
+                    "createdAt": "2022-01-16T21:30:14.736Z",
+                    "updatedAt": "2022-01-16T21:30:14.736Z",
+                    "__v": 0
+                }
+            }
+
+        }
+
+    ]
+
+}
