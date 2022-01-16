@@ -1,0 +1,4 @@
+/node_modules
+.env
+./src/utils/seed/campeones.seed.js
+./src/utils/seed/calles.seed.js
