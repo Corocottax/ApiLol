@@ -75,6 +75,8 @@ const patchCampeon = async (req, res, next) => {
         const { id } = req.params
         const patchCampeon = new Campeon(req.body)
 
+        console.log("1");
+
         patchCampeon._id = id;
 
         if (req.file) {

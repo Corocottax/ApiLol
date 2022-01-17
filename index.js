@@ -36,7 +36,7 @@ const documentation = require("./src/utils/documentation/index.json");
 
 app.use(cors({
 
-    origin: ["http://localhost:3000", "http://localhost:4200"],
+    origin: ["http://localhost:3000", "http://localhost:4200", "http://127.0.0.1:5500"],
     credentials: true
 
 }))
